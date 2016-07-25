@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Loading Animation 1</title>
+
+    <style>
+        body {
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .wrapper {
+            position: relative;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .bubbles {
+            position: absolute;
+            top: 170px;
+            width: 44px;
+            height: 44px;
+            margin: auto;
+            border-radius: 100%;
+            -webkit-animation-name: up-to-1;
+            animation-name: up-to-1;
+            -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+            -webkit-animation-timing-function: cubic-bezier(0.905, 0.130, 0.945, 0.360);
+            animation-timing-function: cubic-bezier(0.905, 0.130, 0.945, 0.360);
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+
+        .tube {
+            position: relative;
+            display: inline-block;
+            width: 45px;
+            height: 220px;
+            background-color: rgba(185, 185, 185, .5);
+            border-radius: 0 0 22px 22px;
+            text-align: center;
+        }
+
+        .line1 {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            margin: auto;
+            width: 75px;
+            height: 8px;
+            background-color: grey;
+            border-radius: 10px;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            z-index: 3;
+        }
+
+        .line2 {
+            position: absolute;
+            top: 200px;
+            left: 75px;
+            margin: auto;
+            width: 8px;
+            height: 210px;
+            background-color: grey;
+            border-radius: 10px;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .line3 {
+            position: absolute;
+            top: 305px;
+            left: 0px;
+            margin: auto;
+            width: 100px;
+            height: 8px;
+            background-color: grey;
+            border-radius: 10px;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .tube-cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 0 0 22px 22px;
+            z-index: 2;
+        }
+
+        .solution-ck {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 0 0 22px 22px;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .ck1,
+        .ck2,
+        .ck3,
+        .ck4,
+        .ck5 {
+            position: absolute;
+            width: 100%;
+            height: 15px;
+            margin-bottom: -1px;
+        }
+
+        .ck1 {
+            bottom: 0;
+            background-color: #8861A4;
+        }
+
+        .ck2 {
+            bottom: 15px;
+            background-color: #2495C1;
+        }
+
+        .ck3 {
+            bottom: 30px;
+            background-color: #48BB6D;
+        }
+
+        .ck4 {
+            bottom: 45px;
+            background-color: #F1C500;
+        }
+
+        .ck5 {
+            bottom: 60px;
+            background-color: #F35957;
+        }
+
+        #b1 {
+            background-color: #8861A4;
+            -webkit-animation-delay: 800ms;
+            animation-delay: 800ms;
+        }
+
+        #b2 {
+            background-color: #2495C1;
+            -webkit-animation-delay: 600ms;
+            animation-delay: 600ms;
+        }
+
+        #b3 {
+            background-color: #48BB6D;
+            -webkit-animation-delay: 400ms;
+            animation-delay: 400ms;
+        }
+
+        #b4 {
+            background-color: #F1C500;
+            -webkit-animation-delay: 200ms;
+            animation-delay: 200ms;
+        }
+
+        #b5 {
+            background-color: #F35957;
+        }
+
+        @-webkit-keyframes up-to-1 {
+            0% {}
+            50% {
+                -webkit-transform: scale(.5);
+                transform: scale(.5);
+            }
+            100% {
+                top: -2000px;
+            }
+        }
+
+        @keyframes up-to-1 {
+            0% {}
+            50% {
+                -webkit-transform: scale(.5);
+                transform: scale(.5);
+            }
+            100% {
+                top: -2000px;
+            }
+        }
+
+        .wobble {
+            -webkit-animation: wobble 5s infinite;
+            animation: wobble 5s infinite;
+        }
+
+        @-webkit-keyframes wobble {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            20% {
+                -webkit-transform: rotate(2deg);
+                transform: rotate(2deg);
+            }
+            50% {
+                -webkit-transform: rotate(-2deg);
+                transform: rotate(-2deg);
+            }
+            100% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes wobble {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            20% {
+                -webkit-transform: rotate(2deg);
+                transform: rotate(2deg);
+            }
+            50% {
+                -webkit-transform: rotate(-2deg);
+                transform: rotate(-2deg);
+            }
+            100% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="tube">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <div class="colored-tube"></div>
+            <div class="bubbles" id="b1">&nbsp</div>
+            <div class="bubbles" id="b2">&nbsp</div>
+            <div class="bubbles" id="b3">&nbsp</div>
+            <div class="bubbles" id="b4">&nbsp</div>
+            <div class="bubbles" id="b5">&nbsp</div>
+            <div class="solution-ck">
+                <div class="ck1 wobble"></div>
+                <div class="ck2 wobble"></div>
+                <div class="ck3 wobble"></div>
+                <div class="ck4 wobble"></div>
+                <div class="ck5 wobble"></div>
+            </div>
+            <div class="tube-cover"></div>
+        </div>
+</body>
+
+</html>

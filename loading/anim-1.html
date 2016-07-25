@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Loading Animation 1</title>
+
+    <style>
+        body {
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .bubbles-wrapper {
+            position: relative;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .bubbles {
+            position: relative;
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            margin: auto;
+            border-radius: 100%;
+            -webkit-animation-name: scale;
+            animation-name: scale;
+            -webkit-animation-duration: 1.7s;
+            animation-duration: 1.7s;
+            -webkit-animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+            animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        #b1 {
+            background-color: #8861A4;
+        }
+
+        #b2 {
+            background-color: #2495C1;
+            -webkit-animation-delay: 100ms;
+            animation-delay: 100ms;
+        }
+
+        #b3 {
+            background-color: #48BB6D;
+            -webkit-animation-delay: 200ms;
+            animation-delay: 200ms;
+        }
+
+        #b4 {
+            background-color: #F1C500;
+            -webkit-animation-delay: 300ms;
+            animation-delay: 300ms;
+        }
+
+        #b5 {
+            background-color: #F35957;
+            -webkit-animation-delay: 400ms;
+            animation-delay: 400ms;
+        }
+
+        @-webkit-keyframes scale {
+            0% {
+                -webkit-transform: translateY(-50%) scale(0.2);
+                transform: translateY(-50%) scale(0.2);
+            }
+            50% {
+                -webkit-transform: translateY(50%) scale(1.2);
+                transform: translateY(50%) scale(1.2);
+            }
+            100% {
+                -webkit-transform: translateY(-50%) scale(0.2);
+                transform: translateY(-50%) scale(0.2);
+            }
+        }
+
+        @keyframes scale {
+            0% {
+                -webkit-transform: translateY(-50%) scale(0.2);
+                transform: translateY(-50%) scale(0.2);
+            }
+            50% {
+                -webkit-transform: translateY(50%) scale(1.2);
+                transform: translateY(50%) scale(1.2);
+            }
+            100% {
+                -webkit-transform: translateY(-50%) scale(0.2);
+                transform: translateY(-50%) scale(0.2);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="bubbles-wrapper">
+        <div class="bubbles" id="b1">&nbsp</div>
+        <div class="bubbles" id="b2">&nbsp</div>
+        <div class="bubbles" id="b3">&nbsp</div>
+        <div class="bubbles" id="b4">&nbsp</div>
+        <div class="bubbles" id="b5">&nbsp</div>
+    </div>
+
+    <div class="danBkg display-none">&nbsp</div>
+
+</body>
