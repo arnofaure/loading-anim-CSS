@@ -13,3 +13,6 @@ Each animation has its **own html file** (+ *Internal CSS Style Sheet*) in the <
 ### Animation 3:
 ![Anim1](preview-gif/anim-3.gif)
 
+### Animation 4:
+![Anim1](preview-gif/anim-4.gif)
+
