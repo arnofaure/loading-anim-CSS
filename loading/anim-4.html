@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Loading Rainbow Animation 4</title>
+   
+   <style>
+   body {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+.wrapper {
+    position: relative;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    text-align: center;
+}
+.ball-line {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 200px;
+    margin-right: -4px;
+    margin-left: -2px;
+    -webkit-transform-origin: top center;
+            transform-origin: top center;
+}
+.anchor-ball, .line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: grey;
+}
+.anchor-ball {
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+
+}
+.ball {
+    position: absolute;
+    top: 170px;
+    width: 44px;
+    height: 44px;
+    margin: auto;
+    border-radius: 100%;
+}
+.line {
+    width: 3px;
+    height: 100%;
+}
+#b1 {
+    background-color: #8861A4;
+}
+#b2 {
+    background-color: #2495C1;
+}
+#b3 {
+    background-color: #48BB6D;
+}
+#b4 {
+    background-color: #F1C500;
+}
+#b5 {
+    background-color: #F35957;
+}
+.anim1, .anim2 {
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-timing-function: cubic-bezier(0.165, 0.990, 0.680, 0.950);
+            animation-timing-function: cubic-bezier(0.165, 0.990, 0.680, 0.950);
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+.anim1 {
+    -webkit-animation-name: first-ball;
+            animation-name: first-ball;
+}
+@-webkit-keyframes first-ball {
+    0% {
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        -webkit-animation-timing-function: cubic-bezier(0.870, 0.105, 0.920, 0.605);
+                animation-timing-function: cubic-bezier(0.870, 0.105, 0.920, 0.605);
+    }
+    20% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+    40% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+    60% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+    }
+}
+@keyframes first-ball {
+    0% {
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        -webkit-animation-timing-function: cubic-bezier(0.870, 0.105, 0.920, 0.605);
+                animation-timing-function: cubic-bezier(0.870, 0.105, 0.920, 0.605);
+    }
+    20% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+    40% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+    60% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+    }
+}
+.anim2 {
+    -webkit-animation-name: last-ball;
+            animation-name: last-ball;
+}
+@-webkit-keyframes last-ball {
+    0% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+    20% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+    40% {
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        -webkit-animation-timing-function: cubic-bezier(0.870, 0.105, 0.920, 0.605);
+                animation-timing-function: cubic-bezier(0.870, 0.105, 0.920, 0.605);
+    }
+    60% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+}
+@keyframes last-ball {
+    0% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+    20% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+    40% {
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        -webkit-animation-timing-function: cubic-bezier(0.870, 0.105, 0.920, 0.605);
+                animation-timing-function: cubic-bezier(0.870, 0.105, 0.920, 0.605);
+    }
+    60% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+}
+
+   </style>
+    
+    
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="ball-line anim1">
+            <div class="line"></div>
+            <div class="anchor-ball"></div>
+            <div class="ball" id="b1"></div>
+        </div>
+        <div class="ball-line">
+            <div class="line"></div>
+            <div class="anchor-ball"></div>
+            <div class="ball" id="b2"></div>
+        </div>
+        <div class="ball-line">
+            <div class="line"></div>
+            <div class="anchor-ball"></div>
+            <div class="ball" id="b3"></div>
+        </div>
+        <div class="ball-line">
+            <div class="line"></div>
+            <div class="anchor-ball"></div>
+            <div class="ball" id="b4"></div>
+        </div>
+        <div class="ball-line anim2">
+            <div class="line"></div>
+            <div class="anchor-ball"></div>
+            <div class="ball" id="b5"></div>
+        </div>
+    </div>
+
+</body>
